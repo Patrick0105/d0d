@@ -139,4 +139,4 @@ def what_today_eat():
     "flex": 0
     }
 }
-    return json.dumps(flexmsg)
+    return flexmsg
