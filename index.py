@@ -32,10 +32,11 @@ def callback():
 
 @line_handler.add(MessageEvent, message=TextMessage)
 def what2Eat(event):
-    if event.message.text == '今天吃什麼':
+    if '今天吃什麼' in event.message.text:
+        msg = func.what_today_eat()
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage('今天吃這個吧！',func.what_today_eat())
+            FlexSendMessage('今天吃這個吧！',msg)
         )
     else:
         line_bot_api.reply_message(
