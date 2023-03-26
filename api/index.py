@@ -1,9 +1,8 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
-from api.chatgpt import ChatGPT
-
+from linebot.models import *
+import func
 import os
 
 line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
@@ -33,22 +32,13 @@ def callback():
     return 'OK'
 
 
-@line_handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    global working_status
-    working_status = True
-    
-    if event.message.type != "text":
-        return
-    
-
-    if working_status:
-        chatgpt.add_msg(f"Human:{event.message.text}?\n")
-        reply_msg = chatgpt.get_response().replace("AI:", "", 1)
-        chatgpt.add_msg(f"AI:{reply_msg}\n")
+@handler.add(MessageEvent, message=TextMessage)
+def what2Eat(event):
+    if '今天吃什麼' in message:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=reply_msg))
+            FlexSendMessage('今天吃這個吧！',func.what_today_eat())
+            )
 
 
 if __name__ == "__main__":
