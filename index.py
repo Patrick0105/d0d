@@ -177,7 +177,7 @@ def what2Eat(event):
         
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage('今天吃這個吧！',json.dumps(what2Eat()))
+            FlexSendMessage('今天吃這個吧！',json.dumps(what_today_eat()))
         )
     else:
         line_bot_api.reply_message(
