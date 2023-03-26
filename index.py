@@ -31,7 +31,7 @@ def callback():
     return 'OK'
 
 
-@line_bot_api.add(MessageEvent, message=TextMessage)
+@line_handler.add(MessageEvent, message=TextMessage)
 def what2Eat(event):
     if '今天吃什麼' in event.message.text:
         msg = func.what_today_eat()
