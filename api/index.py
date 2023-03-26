@@ -4,6 +4,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
 import func
 import os
+import json
 
 line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
 line_handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
@@ -32,11 +33,11 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def what2Eat(event):
-    if '今天吃什麼' in message:
-        bingoMsg = func.what_today_eat()
+    if '今天吃什麼' in event.message.text:
+        func.what_today_eat()
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage('今天吃這個吧！',bingoMsg)
+            FlexSendMessage('今天吃這個吧！',json.dumps(func.flexmsg))
             )
 
 

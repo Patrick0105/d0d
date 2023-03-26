@@ -1,7 +1,6 @@
 
 import pygsheets
 import random
-import json
 true = True
 false = False
 
@@ -16,6 +15,7 @@ def load_sheet():
 
 
 def what_today_eat():
+    global flexmsg
     load_sheet()
     wks = sht.worksheet_by_title('今天吃什麼')
     dataCount = int(wks.cell('K7').value)
@@ -138,8 +138,7 @@ def what_today_eat():
     "flex": 0
     }
 }
-    
-    return json.dumps(flexmsg)
+
     
     
 
