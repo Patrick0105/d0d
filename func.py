@@ -1,7 +1,9 @@
 
 import pygsheets
 import random
-import json
+import requests
+from bs4 import BeautifulSoup
+
 true = True
 false = False
 
@@ -152,3 +154,152 @@ def what_today_eat():
   }
 }
     return flexmsg
+  
+def search_product(pdName):
+    url = f'https://www.bobselection.shop/search?q={pdName}'
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    product_results_div = soup.find('div', {'class': 'col product_results'})
+    product_items = product_results_div.select('div.col-lg-3.col-sm-4.col-6.item')
+
+    data = {
+        "type": "carousel",
+        "contents": []
+    }
+
+    for item in product_items:
+        product_id = item.find('div', {'class': 'product'})['product_id']
+        product_name = item.find('div', {'class': 'product_title'}).text.strip()
+        sold_count = item.find('div', {'class': 'product_sold'}).text.strip()
+        price = item.find('div', {'class': 'product_price'}).text.strip()
+        image_url = item.find('img', {'class': 'img-lazy'})['data-src']
+        product_url = item.find('a', {'class': 'productClick'})['href']
+
+        bubbleMsg = {"type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": f"https:{image_url}",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": product_name,
+            "weight": "bold",
+            "size": "lg",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "售價",
+                    "wrap": true,
+                    "color": "#2480a4",
+                    "size": "md",
+                    "flex": 2,
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "text": price,
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "md",
+                    "flex": 5,
+                    "align": "start"
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "銷量",
+                    "wrap": true,
+                    "color": "#2480a4",
+                    "size": "md",
+                    "flex": 2,
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "text": sold_count,
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "md",
+                    "flex": 5,
+                    "align": "start"
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "編號",
+                    "wrap": true,
+                    "color": "#2480a4",
+                    "size": "md",
+                    "flex": 2,
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "text": product_id,
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "md",
+                    "flex": 5,
+                    "align": "start"
+                  }
+                ]
+              }
+            ],
+            "margin": "10px",
+            "spacing": "4px"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "官網看看",
+              "uri": f"https://www.bobselection.shop/{product_url}"
+            },
+            "color": "#e4a86a"
+          }
+        ]
+      }
+      }
+        data["contents"].append(bubbleMsg)
+    
+    return data
