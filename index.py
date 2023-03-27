@@ -44,16 +44,17 @@ def what2Eat(event):
         # 儲存 pdName 變數，下一次傳送訊息時使用
         pdName = event.message.text.replace('我想吃', '').strip()
         # 在下一次傳送訊息時呼叫 search_product(pdName) 函數
-        if func.search_product(pdName) !=1:
-            line_bot_api.reply_message(
-                event.reply_token,
-                FlexSendMessage('找到一些好料的!',func.search_product(pdName))
-            )
-        else:
+        run = func.search_product(pdName)
+        if run == 1:
             line_bot_api.reply_message(
                 event.reply_token,
             TextSendMessage(text=f'沒有關於 {pdName} 的商品哦~')
         )
+        else:
+            line_bot_api.reply_message(
+                event.reply_token,
+                FlexSendMessage('找到一些好料的!',run)
+            )
 
     else:
         line_bot_api.reply_message(
