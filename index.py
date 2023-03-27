@@ -45,16 +45,277 @@ def what2Eat(event):
         pdName = event.message.text.replace('我想吃', '').strip()
         # 在下一次傳送訊息時呼叫 search_product(pdName) 函數
         run = func.search_product(pdName)
-        a = {"type": "carousel", "contents": [{"type": "bubble", "size": "kilo", "hero": {"type": "image", "url": "https://cdn1.cybassets.com/media/W1siZiIsIjE4ODk5L3Byb2R1Y3RzLzM3MDA2NzYyLzE2NTQwNzk3OTRfOGMwYjI2MzA3ZDI3Nzg2YWM4Y2YuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=54187ef95c3f3339", "size": "full", "aspectMode": "cover", "aspectRatio": "320:213"}, "body": {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "\u3010\u4ec1\u548c\u9b91\u9b5a\u3011\u6912\u9ebb\u4e5d\u5b54\u7f50\u982d", "weight": "bold", "size": "lg", "wrap": true}, {"type": "box", "layout": "vertical", "contents": [{"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u552e\u50f9", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "NT$220", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u92b7\u91cf", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "\u5df2\u92b7\u552e\uff1a4", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u7de8\u865f", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "37006762", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}], "margin": "10px", "spacing": "4px"}], "spacing": "sm", "paddingAll": "13px"}, "action": {"type": "uri", "label": "action", "uri": "https://www.bobselection.shop//products/\u4ec1\u548c\u9b91\u9b5a\u6912\u9ebb\u4e5d\u5b54\u7f50\u982d"}}, {"type": "bubble", "size": "kilo", "hero": {"type": "image", "url": "https://cdn1.cybassets.com/media/W1siZiIsIjE4ODk5L3Byb2R1Y3RzLzM0MDg4NzcwLzE2MjY5NDE0OTVfNDIwODg4NTBhMjkxMTc3ZDY3MTkuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=e7215ffd1430f8f9", "size": "full", "aspectMode": "cover", "aspectRatio": "320:213"}, "body": {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "\u3010\u4ec1\u548c\u9b91\u9b5a\u3011\u9bae\u51cd\u4e5d\u5b54", "weight": "bold", "size": "lg", "wrap": true}, {"type": "box", "layout": "vertical", "contents": [{"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u552e\u50f9", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "NT$500", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u92b7\u91cf", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "\u5df2\u92b7\u552e\uff1a49", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u7de8\u865f", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "34088770", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}], "margin": "10px", "spacing": "4px"}], "spacing": "sm", "paddingAll": "13px"}, "action": {"type": "uri", "label": "action", "uri": "https://www.bobselection.shop//products/freshabalone"}}, {"type": "bubble", "size": "kilo", "hero": {"type": "image", "url": "https://cdn1.cybassets.com/media/W1siZiIsIjE4ODk5L3Byb2R1Y3RzLzM0MDg4Njg3LzE2MjY5NDAyNzNfODBhNDJkNWE1ZDdlMjI2MWQxNjkuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=2bf36f8591e4829b", "size": "full", "aspectMode": "cover", "aspectRatio": "320:213"}, "body": {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "\u3010\u4ec1\u548c\u9b91\u9b5a\u3011\u9bae\u6f2c\u4e5d\u5b54", "weight": "bold", "size": "lg", "wrap": true}, {"type": "box", "layout": "vertical", "contents": [{"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u552e\u50f9", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "NT$600", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u92b7\u91cf", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "\u5df2\u92b7\u552e\uff1a44", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u7de8\u865f", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "34088687", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}], "margin": "10px", "spacing": "4px"}], "spacing": "sm", "paddingAll": "13px"}, "action": {"type": "uri", "label": "action", "uri": "https://www.bobselection.shop//products/soysauceabalone-20210722155106"}}, {"type": "bubble", "size": "kilo", "hero": {"type": "image", "url": "https://cdn1.cybassets.com/media/W1siZiIsIjE4ODk5L3Byb2R1Y3RzLzM0MDg4NjE1LzE2NzMzNDE2NDZfZTA3M2UxOGM5NjdmN2UwOWI4ZDkuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=4f5ec73a3fea88f3", "size": "full", "aspectMode": "cover", "aspectRatio": "320:213"}, "body": {"type": "box", "layout": "vertical", "contents": [{"type": "text", "text": "\u3010\u4ec1\u548c\u9b91\u9b5a\u3011\u4e5d\u5b54\u91ac", "weight": "bold", "size": "lg", "wrap": true}, {"type": "box", "layout": "vertical", "contents": [{"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u552e\u50f9", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "NT$400\nNT$450", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u92b7\u91cf", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "\u5df2\u92b7\u552e\uff1a75", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}, {"type": "box", "layout": "baseline", "spacing": "sm", "contents": [{"type": "text", "text": "\u7de8\u865f", "wrap": true, "color": "#2480a4", "size": "md", "flex": 2, "align": "center"}, {"type": "text", "text": "34088615", "wrap": true, "color": "#8c8c8c", "size": "md", "flex": 5, "align": "start"}]}], "margin": "10px", "spacing": "4px"}], "spacing": "sm", "paddingAll": "13px"}, "action": {"type": "uri", "label": "action", "uri": "https://www.bobselection.shop//products/abalonesauce"}}]}
+        run2 = {
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Brown Cafe",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "4.0",
+                "size": "xs",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "東京旅行",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip11.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Brow&Cony's Restaurant",
+            "weight": "bold",
+            "size": "sm",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "4.0",
+                "size": "sm",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "東京旅行",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip12.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Tata",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+              },
+              {
+                "type": "icon",
+                "size": "xs",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+              },
+              {
+                "type": "text",
+                "text": "4.0",
+                "size": "sm",
+                "color": "#8c8c8c",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "東京旅行",
+                    "wrap": true,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    }
+  ]
+}
         if run == 1:
             line_bot_api.reply_message(
                 event.reply_token,
-            TextSendMessage(text=f'沒有關於 {pdName} 的商品哦~')
+            TextSendMessage(text=f'沒有關於 {pdName} 的產品哦~')
         )
         else:
             line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage('找到一些好料的!',a)
+                FlexSendMessage('找到一些好料的!',run2)
             )
 
     else:
