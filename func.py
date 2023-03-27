@@ -197,7 +197,7 @@ def search_product(pdName):
             "text": product_name,
             "weight": "bold",
             "size": "lg",
-            "wrap": true
+            "wrap": True
           },
           {
             "type": "box",
@@ -211,7 +211,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": "售價",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#2480a4",
                     "size": "md",
                     "flex": 2,
@@ -220,7 +220,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": price,
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "md",
                     "flex": 5,
@@ -236,7 +236,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": "銷量",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#2480a4",
                     "size": "md",
                     "flex": 2,
@@ -245,7 +245,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": sold_count,
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "md",
                     "flex": 5,
@@ -261,7 +261,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": "編號",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#2480a4",
                     "size": "md",
                     "flex": 2,
@@ -270,7 +270,7 @@ def search_product(pdName):
                   {
                     "type": "text",
                     "text": product_id,
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "md",
                     "flex": 5,
