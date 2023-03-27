@@ -47,8 +47,12 @@ def what2Eat(event):
         try:
             line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage('找到一些好料的!',func.search_product(pdName))
-            )
+            TextSendMessage(text=func.search_product(pdName))
+        )
+            # line_bot_api.reply_message(
+            #     event.reply_token,
+            #     FlexSendMessage('找到一些好料的!',func.search_product(pdName))
+            # )
         except:
             line_bot_api.reply_message(
                 event.reply_token,
