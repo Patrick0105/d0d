@@ -3,6 +3,7 @@ import pygsheets
 import random
 import requests
 from bs4 import BeautifulSoup
+import json
 
 true = True
 false = False
@@ -302,4 +303,4 @@ def search_product(pdName):
       }
         data["contents"].append(bubbleMsg)
     
-    return data
+    return json.dumps(data)
