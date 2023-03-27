@@ -34,7 +34,7 @@ def callback():
 
 @line_handler.add(MessageEvent, message=TextMessage)
 def what2Eat(event):
-    if '今天吃什麼' in event.message.text:
+    if '今天吃什麼' in event.message.text or '吃膩ㄌ啦' in event.message.text:
         
         line_bot_api.reply_message(
             event.reply_token,

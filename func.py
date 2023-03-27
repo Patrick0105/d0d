@@ -143,7 +143,7 @@ def what_today_eat():
         "action": {
           "type": "message",
           "label": "換口味",
-          "text": "今天吃什麼"
+          "text": "吃膩ㄌ啦"
         },
         "color": "#2480A4"
       }
