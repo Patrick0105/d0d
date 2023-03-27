@@ -157,6 +157,7 @@ def what_today_eat():
     return flexmsg
   
 def search_product(pdName):
+  try:
     url = f'https://www.bobselection.shop/search?q={pdName}'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
@@ -178,11 +179,7 @@ def search_product(pdName):
         image_url = item.find('img', {'class': 'img-lazy'})['data-src']
         product_url = item.find('a', {'class': 'productClick'})['href']
 
-        bubbleMsg = {
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
+        bubbleMsg = {"type": "bubble",
       "size": "kilo",
       "hero": {
         "type": "image",
@@ -295,8 +292,10 @@ def search_product(pdName):
         "uri": f"https://www.bobselection.shop/{product_url}"
       }
     }
-  ]
-}
+
         data["contents"].append(bubbleMsg)
     
-    return json.dumps(data)
+    return data
+  except:
+    return 1
+  
