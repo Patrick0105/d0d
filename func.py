@@ -23,32 +23,6 @@ def what_today_eat():
     bingoNum = random.randint(1,dataCount)
     flexmsg = {
   "type": "bubble",
-  "quickReply": {
-                "items": [
-                    {
-                        "type": "action",
-                        "action": {
-                            "type": "message",
-                            "label": "吃膩ㄌ啦！",
-                            "text": "今天吃什麼"
-                        }
-                    },
-                    {
-                        "type": "action",
-                        "action": {
-                            "type": "uri",
-                            "label": "聯絡我們",
-                            "uri": "mailto:info@bobselection.shop"
-                        }
-                    },
-                    {
-                        "type": "action",
-                        "action": {
-                            "type": "uri",
-                            "label": "前往官網",
-                            "uri": "https://www.bobselection.shop/"
-                        }
-                    }]},
   "hero": {
     "type": "image",
     "url": wks.cell(f'E{bingoNum}').value,
