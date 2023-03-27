@@ -178,7 +178,11 @@ def search_product(pdName):
         image_url = item.find('img', {'class': 'img-lazy'})['data-src']
         product_url = item.find('a', {'class': 'productClick'})['href']
 
-        bubbleMsg = {"type":"bubble",
+        bubbleMsg = {
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
       "size": "kilo",
       "hero": {
         "type": "image",
@@ -276,15 +280,6 @@ def search_product(pdName):
                     "align": "start"
                   }
                 ]
-              },
-              {
-                "type": "button",
-                "action": {
-                  "type": "uri",
-                  "label": "官網看看",
-                  "uri": f"https://www.bobselection.shop/{product_url}"
-                },
-                "color": "#e4a86a"
               }
             ],
             "margin": "10px",
@@ -293,8 +288,15 @@ def search_product(pdName):
         ],
         "spacing": "sm",
         "paddingAll": "13px"
+      },
+      "action": {
+        "type": "uri",
+        "label": "action",
+        "uri": f"https://www.bobselection.shop/{product_url}"
       }
     }
+  ]
+}
         data["contents"].append(bubbleMsg)
     
     return data
