@@ -221,7 +221,7 @@ def search_product(pdName):
                     "type": "text",
                     "text": price,
                     "wrap": True,
-                    "color": "#8c8c8c",
+                    "color": "#e4a86a",
                     "size": "md",
                     "flex": 5,
                     "align": "start"
