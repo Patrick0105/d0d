@@ -285,11 +285,6 @@ def search_product(pdName):
         ],
         "spacing": "sm",
         "paddingAll": "13px"
-      },
-      "action": {
-        "type": "uri",
-        "label": "action",
-        "uri": f"https://www.bobselection.shop/{product_url}"
       }
     }
 
