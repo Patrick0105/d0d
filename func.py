@@ -299,4 +299,4 @@ def search_product(pdName):
 }
         data["contents"].append(bubbleMsg)
     
-    return data
+    return json.dumps(data)
