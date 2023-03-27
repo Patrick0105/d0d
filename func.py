@@ -22,121 +22,159 @@ def what_today_eat():
     dataCount = int(wks.cell('K7').value)
     bingoNum = random.randint(1,dataCount)
     flexmsg = {
-"type": "bubble",
-"hero": {
+  "type": "bubble",
+  "quickReply": {
+                "items": [
+                    {
+                        "type": "action",
+                        "action": {
+                            "type": "message",
+                            "label": "吃膩ㄌ啦！",
+                            "text": "今天吃什麼"
+                        }
+                    },
+                    {
+                        "type": "action",
+                        "action": {
+                            "type": "uri",
+                            "label": "聯絡我們",
+                            "uri": "mailto:info@bobselection.shop"
+                        }
+                    },
+                    {
+                        "type": "action",
+                        "action": {
+                            "type": "uri",
+                            "label": "前往官網",
+                            "uri": "https://www.bobselection.shop/"
+                        }
+                    }]},
+  "hero": {
     "type": "image",
     "url": wks.cell(f'E{bingoNum}').value,
     "size": "full",
     "aspectRatio": "20:13",
     "aspectMode": "cover",
     "action": {
-        "type": "uri",
-        "uri": "http://linecorp.com/"
+      "type": "uri",
+      "uri": "http://linecorp.com/"
     }
-    },
-    "body": {
+  },
+  "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
-        {
+      {
         "type": "text",
         "text": wks.cell(f'A{bingoNum}').value,
         "weight": "bold",
         "size": "xl"
-        },
-        {
+      },
+      {
         "type": "box",
         "layout": "vertical",
         "margin": "lg",
         "spacing": "sm",
         "contents": [
-            {
+          {
             "type": "box",
             "layout": "baseline",
             "spacing": "sm",
             "contents": [
-                {
+              {
                 "type": "text",
                 "text": "品牌",
                 "color": "#2480A4",
                 "size": "sm",
                 "flex": 1
-                },
-                {
+              },
+              {
                 "type": "text",
                 "text": wks.cell(f'B{bingoNum}').value,
                 "wrap": true,
                 "color": "#E4A86A",
                 "size": "sm",
                 "flex": 5
-                }
+              }
             ]
-            },
-            {
+          },
+          {
             "type": "box",
             "layout": "baseline",
             "spacing": "sm",
             "contents": [
-                {
+              {
                 "type": "text",
                 "text": "理念",
                 "color": "#2480A4",
                 "size": "sm",
                 "flex": 1
-                },
-                {
+              },
+              {
                 "type": "text",
                 "text": wks.cell(f'D{bingoNum}').value,
                 "wrap": true,
                 "color": "#666666",
                 "size": "sm",
                 "flex": 5
-                }
+              }
             ]
-            },
-            {
+          },
+          {
             "type": "box",
             "layout": "baseline",
             "spacing": "sm",
             "contents": [
-                {
+              {
                 "type": "text",
                 "text": "介紹",
                 "color": "#2480A4",
                 "size": "sm",
                 "flex": 1
-                },
-                {
+              },
+              {
                 "type": "text",
                 "text": wks.cell(f'C{bingoNum}').value,
                 "wrap": true,
                 "color": "#666666",
                 "size": "sm",
                 "flex": 5
-                }
+              }
             ]
-            }
+          }
         ]
-        }
+      }
     ]
-    },
-    "footer": {
+  },
+  "footer": {
     "type": "box",
-    "layout": "vertical",
+    "layout": "horizontal",
     "spacing": "sm",
     "contents": [
-        {
+      {
         "type": "button",
         "style": "link",
         "height": "sm",
         "action": {
-            "type": "uri",
-            "label": "馬上嚐鮮",
-            "uri": wks.cell(f'F{bingoNum}').value
-        }
-        }
+          "type": "uri",
+          "label": "馬上嚐鮮",
+          "uri": wks.cell(f'F{bingoNum}').value
+        },
+        "color": "#E4A86A"
+      },
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "message",
+          "label": "換口味",
+          "text": "今天吃什麼"
+        },
+        "color": "#2480A4"
+      }
     ],
     "flex": 0
-    }
+  }
 }
     return flexmsg
