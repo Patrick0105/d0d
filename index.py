@@ -52,15 +52,15 @@ def what2Eat(event):
             TextSendMessage(text=f'沒有關於 {pdName} 的產品哦~')
         )
         else:
-            print(json.dumps(run))
-            # line_bot_api.reply_message(
-            #     event.reply_token,
-            #     FlexSendMessage('找到一些好料的!',run)
-            # )
+            # print(json.dumps(run))
             line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='123')
-        )
+                event.reply_token,
+                FlexSendMessage('找到一些好料的!',json.dumps(run))
+            )
+        #     line_bot_api.reply_message(
+        #     event.reply_token,
+        #     TextSendMessage(text='123')
+        # )
 
     else:
         line_bot_api.reply_message(
