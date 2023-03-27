@@ -40,18 +40,20 @@ def what2Eat(event):
             event.reply_token,
             FlexSendMessage('今天吃這個吧！',func.what_today_eat())
         )
-    if '我想吃' in event.message.text:
-        # 儲存 pdName 變數，下一次傳送訊息時使用
-        pdName = event.message.text.replace('我想吃', '').strip()
-        # 在下一次傳送訊息時呼叫 search_product(pdName) 函數
-        line_bot_api.reply_message(
-                event.reply_token,
-            TextSendMessage(text=func.search_product(pdName))
-        )
-            # line_bot_api.reply_message(
-            #     event.reply_token,
-            #     FlexSendMessage('找到一些好料的!',func.search_product(pdName))
-            # )
+    # if '我想吃' in event.message.text:
+    #     # 儲存 pdName 變數，下一次傳送訊息時使用
+    #     pdName = event.message.text.replace('我想吃', '').strip()
+    #     # 在下一次傳送訊息時呼叫 search_product(pdName) 函數
+    #     try:
+    #         line_bot_api.reply_message(
+    #             event.reply_token,
+    #             FlexSendMessage('找到一些好料的!',func.search_product(pdName))
+    #         )
+    #     except:
+    #         line_bot_api.reply_message(
+    #             event.reply_token,
+    #         TextSendMessage(text=f'沒有關於 {pdName} 的商品哦~')
+    #     )
 
     else:
         line_bot_api.reply_message(
