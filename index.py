@@ -56,7 +56,7 @@ def what2Eat(event):
             # print(json.dumps(run))
             line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage('找到一些好料的!',a)
+                FlexSendMessage('找到一些好料的!',json.dumps(a))
             )
         #     line_bot_api.reply_message(
         #     event.reply_token,
