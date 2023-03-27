@@ -40,9 +40,9 @@ def what2Eat(event):
             event.reply_token,
             FlexSendMessage('今天吃這個吧！',func.what_today_eat())
         )
-    if '我想' in event.message.text:
+    if '我想吃' in event.message.text:
         # 儲存 pdName 變數，下一次傳送訊息時使用
-        pdName = event.message.text.replace('我想找', '').strip()
+        pdName = event.message.text.replace('我想吃', '').strip()
         # 在下一次傳送訊息時呼叫 search_product(pdName) 函數
         try:
             line_bot_api.reply_message(
