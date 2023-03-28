@@ -428,6 +428,6 @@ def get_coupon():
         ]
       }
     ],
-    "backgroundColor": "#000000"
+    "backgroundColor": "#053036"
   }
 }
