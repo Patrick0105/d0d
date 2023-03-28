@@ -294,4 +294,140 @@ def search_product(pdName):
   except:
     return 1
   
-  #123
+def get_coupon():
+  return {
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://cdn1.cybassets.com/s/files/18899/theme/64072/assets/img/1658221501_f33b3a4e_main_slider_item_4_lg.jpg?1658221501",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "http://linecorp.com/"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "text",
+        "text": "芝麻食品 85折",
+        "wrap": true,
+        "weight": "bold",
+        "gravity": "center",
+        "size": "xl",
+        "color": "#E4A86A",
+        "align": "center"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "margin": "md",
+        "contents": []
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "優惠代碼",
+                "color": "#2480a4",
+                "size": "sm",
+                "flex": 2
+              },
+              {
+                "type": "text",
+                "text": "C8763",
+                "wrap": true,
+                "color": "#E4A86A",
+                "size": "sm",
+                "flex": 4
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "使用期限",
+                "color": "#2480a4",
+                "size": "sm",
+                "flex": 2
+              },
+              {
+                "type": "text",
+                "text": "Monday 25, 9:00PM",
+                "wrap": true,
+                "size": "sm",
+                "color": "#E4A86A",
+                "flex": 4
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "使用門檻",
+                "color": "#2480a4",
+                "size": "sm",
+                "flex": 2
+              },
+              {
+                "type": "text",
+                "text": "訂單金額滿足 $8763 元",
+                "wrap": true,
+                "color": "#E4A86A",
+                "size": "sm",
+                "flex": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "xxl",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://stonetestweb.azurewebsites.net/img.aspx?custid=1&username=public&codetype=QR&EClevel=1&logo=&data=https%3a%2f%2fcdn.bella.tw%2findex_image%2fSIXlRaTmfMy5HlCHixB9BrxUUJEO0RsHCitEVCpV.jpeg",
+            "aspectMode": "cover",
+            "size": "xl",
+            "margin": "md"
+          },
+          {
+            "type": "text",
+            "text": "優惠代碼僅可使用一次",
+            "color": "#aaaaaa",
+            "wrap": true,
+            "margin": "xxl",
+            "size": "xs",
+            "align": "center",
+            "gravity": "center"
+          }
+        ]
+      }
+    ],
+    "backgroundColor": "#000000"
+  }
+}
