@@ -305,7 +305,7 @@ def get_coupon():
     "aspectMode": "cover",
     "action": {
       "type": "uri",
-      "uri": "http://linecorp.com/"
+      "uri": "https://www.bobselection.shop/"
     }
   },
   "body": {
