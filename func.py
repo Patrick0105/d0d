@@ -305,7 +305,7 @@ def get_coupon():
     "aspectMode": "cover",
     "action": {
       "type": "uri",
-      "uri": "https://www.bobselection.shop/"
+      "uri": "https://www.bobselection.shop/search?q=%E8%8A%9D%E9%BA%BB"
     }
   },
   "body": {
