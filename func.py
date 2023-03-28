@@ -285,6 +285,11 @@ def search_product(pdName):
         ],
         "spacing": "sm",
         "paddingAll": "13px"
+      },
+      "action": {
+        "type": "uri",
+        "label": "gogo",
+        "uri": product_url
       }
     }
 
