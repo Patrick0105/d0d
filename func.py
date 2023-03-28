@@ -429,8 +429,8 @@ def get_coupon():
             "type": "button",
             "action": {
               "type": "uri",
-              "label": "領取優惠",
-              "uri": "https://assets.matters.news/embed/dfa5ea2a-24c0-4607-9951-ba525e8013f7.jpeg"
+              "label": "將它拿下！",
+              "uri": "https://cdn.bella.tw/index_image/SIXlRaTmfMy5HlCHixB9BrxUUJEO0RsHCitEVCpV.jpeg"
             },
             "color": "#e4a86a",
             "gravity": "center",
