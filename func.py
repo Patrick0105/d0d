@@ -424,6 +424,18 @@ def get_coupon():
             "size": "xs",
             "align": "center",
             "gravity": "center"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "領取優惠",
+              "uri": "https://assets.matters.news/embed/dfa5ea2a-24c0-4607-9951-ba525e8013f7.jpeg"
+            },
+            "color": "#e4a86a",
+            "gravity": "center",
+            "style": "primary",
+            "margin": "10px"
           }
         ]
       }
